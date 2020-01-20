@@ -3,14 +3,13 @@
 # Projeto da LM 2019.1
 
 
-◤Descrição de projet:
+Descrição de projeto:
 
 Apresentação como são mundo dos jogos e como foi feito.
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-◤Requisítos mínimos◥
-
+Requisitos mínimo:
 Navegador com suporte para HTML5 e CSS3
 
 -------------------------------------------------------------------------------------------------------------------------------------
