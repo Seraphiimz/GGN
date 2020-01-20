@@ -1,0 +1,523 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+}
+
+/* navbar */
+.nav {
+  position: fixed;
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  animation: loading-banner-bg 2.5s ease-in-out;
+}
+
+@keyframes loading-nav {
+  from,
+  80% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav .container {
+  padding: 0 .5rem;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  animation: loading-navbar 2s;
+}
+
+.nav .nav-brand, .nav .nav-menu {
+  display: flex;
+  align-items: stretch;
+}
+
+.nav .nav-brand a {
+  transition: all .3s;
+}
+
+.nav .nav-brand a:hover {
+  transform: scale(1.1);
+}
+
+.nav .nav-item {
+  margin-left: .5rem;
+  color: #363636;
+  transition: all .3s;
+}
+
+.nav .nav-item:hover {
+  background-color: #fff;
+}
+
+.nav a {
+  color: #363636;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .5rem;
+}
+
+/* nav-top */
+
+.nav-top {
+  background-color: #383838;
+  color: #fff;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s;
+}
+
+.nav-top:hover {
+  background-color: #696969;
+  cursor: pointer;
+}
+
+.nav-top.hidden {
+  right: -10rem;
+}
+
+.nav-top .fa-chevron-up {
+  width: 2rem;
+  height: 2rem;
+  fill: #fff;
+}
+
+/* banner */
+#banner {
+  min-height: 100vh;
+  color: #363636;
+  text-align: center;
+  background-color: #f5f5f5;
+  padding: 3rem 1.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: loading-banner-bg 2.5s ease-in-out;
+}
+
+@keyframes loading-banner-bg {
+  from {
+    background-color: #bbb;
+  }
+  to {
+    background-color: #f5f5f5;
+  }
+}
+
+#banner .container {
+  display: grid;
+  align-items: center;
+}
+
+@media all and (min-width: 850px) {
+  #banner .container {
+    grid-template-columns: 2fr 3fr;
+  }
+}
+
+#banner .tipo {
+  animation: loading-banner-tipo 2s;
+}
+
+@keyframes loading-banner-tipo {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+#banner .tipo img {
+  max-width: 200px;
+}
+
+#banner .pxb {
+  display: none;
+  animation: loading-banner-pxb 5s;
+}
+
+@keyframes loading-banner-pxb {
+  from {
+    transform: translateX(100px);
+    opacity: 10;
+  }
+  30% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@media all and (min-width: 850px) {
+  #banner .pxb {
+    display: block;
+    padding: 1rem;
+  }
+
+  #banner .pxb img {
+    width: 100%;
+  }
+}
+
+#banner p {
+  margin: 2rem 0;
+}
+
+/* sobre */
+#sobre {
+  padding: 4rem 1.5rem 3rem;
+  background-color:gray;
+  color: rgba(0, 0, 0, .7);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sobre .titulo {
+  font-size: 2rem;
+}
+
+#sobre p {
+  margin: 1rem 0;
+}
+
+@media all and (min-width: 800px) {
+  #sobre .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#sobre .figura {
+  display: none;
+  overflow: hidden;
+}
+
+@media all and (min-width: 800px) {
+  #sobre .figura {
+    display: block;
+  }
+}
+
+#sobre .figura img {
+  transition: transform .5s;
+}
+
+@media all and (min-width: 800px) {
+  #sobre .figura img {
+    width: 100%;
+  }
+}
+
+#sobre .figura img:hover {
+  transform: scale(1.05);
+}
+
+@media all and (min-width: 800px) {
+  #sobre .tipo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+}
+
+#sobre .button {
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, .7);
+  color: rgba(0, 0, 0, .7);
+  font-size: 1.25rem;
+  padding: .5rem .8rem;
+  border-radius: 4px;
+  box-shadow: none;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+#sobre .button:hover {
+  background: rgba(0, 0, 0, .7);
+  color: red;
+
+}
+
+/* inserir */
+#inserir {
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+  color: red;
+  background: url("imgs/games.jpeg") center/cover black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#inserir .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#inserir .titulo {
+  font-size: 2rem;
+}
+
+#inserir .subtitle {
+  font-size: 1.25rem;
+  margin: .7rem;
+}
+
+#inserir form {
+  width: 80%;
+  margin: 6rem auto 0;
+  display: grid;
+  grid-template-areas: 
+    "author email"
+    "type type"
+    "title title"
+    "abstract abstract"
+}
+
+@media all and (max-width: 600px) {
+  #inserir form {
+    margin-top: 1rem;
+    width: 100%;
+    grid-template-areas: 
+      "author"
+      "email"
+      "type"
+      "title"
+      "abstract"
+  }
+}
+
+#inserir form .form-field > label,
+span.label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: .3rem;
+  text-transform: uppercase;
+}
+
+@media all and (min-width: 600px) {
+  #inserir form .form-field.type > div {
+    display: flex;
+    text-align: left;
+  }
+}
+
+#inserir form input[type=radio]+label {
+  font-size: 1.2rem;
+}
+
+@media all and (min-width: 600px) {
+  #inserir form input[type=radio]+label {
+    margin-right: 1rem;
+  }
+}
+
+#inserir form input[type=radio] {
+  font-size: 1rem;
+}
+
+#inserir form .author {
+  grid-area: author;
+}
+
+#inserir form .email {
+  grid-area: email;
+}
+
+#inserir form .type {
+  grid-area: type;
+}
+
+#inserir form .titulo {
+  grid-area: titulo;
+}
+
+#inserir form .abstract {
+  grid-area: abstract;
+}
+
+#inserir form input:not([type=radio]),
+#inserir form textarea {
+  padding: .3rem;
+  font-size: 1.2rem;
+  outline: none;
+  width: 100%;
+}
+
+#inserir form .form-field {
+  padding: .7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#inserir .button {
+  display: inline-flex;
+  background-color: red;
+  color: black;
+  cursor: pointer;
+  margin: 2rem;
+  font-size: 1.25rem;
+  padding: .5rem .8rem;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-shadow: none;
+  text-decoration: none;
+  transition: all .3s;
+  background: url(img/pstart.png) none;
+}
+
+#inserir .button:hover {
+  color: red;
+  border-color: gray;
+  background-color: black;
+}
+
+#inserir .press {
+  width: 100%;
+  max-width: 100px;
+  margin: auto;
+}
+
+/* local */
+#local {
+  padding: 3rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+}
+
+#local .container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+}
+
+@media all and (min-width: 550px) {
+  #local .container {
+    grid-template-columns: repeat(4, auto);
+  }
+}
+
+#local .titulo {
+  text-align: center;
+  margin-bottom: 1rem;
+  grid-column: 1/3;
+}
+
+@media all and (min-width: 550px) {
+  #local .titulo {
+    grid-column: 1/5;
+  }
+}
+
+#local a {
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#local figura {
+  padding: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#local figura img {
+  max-width: 150px;
+  transition: transform .3s;
+}
+
+#local figura img:hover {
+  transform: scale(1.1);
+}
+
+@media all and (min-width: 1000px) {
+  #local figura img {
+    max-width: 200px;
+  }
+}
+
+#logo-conductor {
+  width: 65%;
+}
+
+#logo-hostdime {
+  width: 100%;
+}
+
+#logo-mvarandas {
+  width: 80%;
+}
+
+#logo-softcom {
+  width: 90%;
+}
+
+/* footer */
+.footer {
+  color: red;
+  background-color: white;
+  padding: 30px 30px 30px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer p {
+  margin: 1.5rem 0;
+}
